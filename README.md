@@ -2,4 +2,4 @@
 
 -----In Progress-----
 
-Loading... Shelving Academic Books... Shelving Thesis Manuscripts...
+Loading . . .  Shelving Academic Books . . .  Shelving Thesis Manuscripts . . .
