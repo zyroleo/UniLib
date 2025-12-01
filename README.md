@@ -3,7 +3,7 @@
 📘 Overview
 
 UniLib’s library-system-DB module provides the database schema and scripts for a Library Management System.
-It is intended to support key library operations — storing book and member records, tracking borrow/return transactions, and managing library data in a relational database.
+It is intended to support key library operations storing book and member records, tracking borrow/return transactions, and managing library data in a relational database.
 
 This module focuses solely on database design and data management (tables, relationships, data constraints) rather than UI or application logic.
 
