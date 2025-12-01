@@ -1,13 +1,14 @@
 # UniLib
 
-📘 Overview
+📘 OVERVIEW
 
 UniLib’s library-system-DB module provides the database schema and scripts for a Library Management System.
 It is intended to support key library operations storing book and member records, tracking borrow/return transactions, and managing library data in a relational database.
 
 This module focuses solely on database design and data management (tables, relationships, data constraints) rather than UI or application logic.
 
-🚀 Features
+
+🚀 FEATURES
 
 🔹 Core Database Features
 
@@ -29,7 +30,8 @@ This module focuses solely on database design and data management (tables, relat
 
 📦 Easy export/import
 
-📁 Repository Structure
+
+📁 REPOSITORY STUCTURES
 
 schema.sql
 
@@ -43,7 +45,7 @@ README.md
 
 
 
-🛠️ Getting Started / Setup Instructions
+🛠️ GETTING STARTED
 
 Clone the repository
 
@@ -68,7 +70,7 @@ Configure your application (if any) to connect to the database library_db using 
 
 Once connected, test basic queries to verify tables are created and accessible.
 
-🧰 Intended Usage
+🧰 INTENDED USAGE
 
 This database module is designed to be used in tandem with an application layer (web, desktop, API) that implements library logic — e.g.:
 
@@ -84,7 +86,7 @@ Tracking loan history, due dates, fines (if implemented)
 
 You may build your own UI or integrate with existing front-end/back-end frameworks, as long as they connect to the schema provided here.
 
-📌 Why This Repository Exists
+📌 WHY THIS REPOSITORY EXIST
 
 Maintaining a clean, well-defined database schema for a library system helps in:
 
@@ -96,7 +98,7 @@ Supporting scalability and future maintenance
 
 Allowing reuse across different front-ends or projects
 
-🔍 Future Improvements (Possible Enhancements)
+🔍 FUTURE IMPROVEMENTS (POSSIBLE ENHANCEMENT)
 
 Add migration scripts for schema updates over time.
 
@@ -108,10 +110,12 @@ Add documentation for database ER diagram and table descriptions.
 
 Provide seed data sample files (books, members) to ease testing.
 
-📄 License & Contribution
 
-Currently no explicit license file is included.
+CREATED BY:
 
-If you wish to use, modify or contribute — feel free to fork, modify, and submit pull requests.
+Albo, Lex Randal B.
 
-When contributing, please document any schema changes or added SQL scripts.
+Ballesteros, Zyra
+
+Quijaro, Earl Leobert
+
