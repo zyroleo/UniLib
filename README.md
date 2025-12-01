@@ -7,13 +7,27 @@ It is intended to support key library operations — storing book and member rec
 
 This module focuses solely on database design and data management (tables, relationships, data constraints) rather than UI or application logic.
 
-✅ Features
+🚀 Features
 
-Database schema for library entities: books, members/users, circulation (borrow/return), and related metadata.
+🔹 Core Database Features
 
-Support for core library operations: adding/removing books and members, checking out and returning books, tracking availability and loan history.
+📘 Book catalog (title, author, availability, category)
 
-Structured design suitable for integration with a front-end, web application, or other library system interfaces.
+🧑‍🤝‍🧑 Member records
+
+🔄 Loan management (borrow/return)
+
+🗂 Categories & metadata
+
+🔹 Technical Features
+
+🔐 Foreign keys & constraints
+
+🧱 Normalized and clean schema
+
+⚙ Optional triggers & views
+
+📦 Easy export/import
 
 📁 Repository Structure
 
