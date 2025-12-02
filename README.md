@@ -44,19 +44,19 @@ _______________
 ## 🦋OOP Concepts Applied
 #### 🔹 Encapsulation
 
-Classes such as `Item`, `Book`, `Laptop`, and `Student` have private fields with public getters/setters, ensuring controlled access to data.
+All model classes use private fields with getters/setters. DAOs encapsulate database logic so other layers do not need to interact with SQL.
 
 #### 🔹 Inheritance
 
-Common attributes `(e.g., ID, name, contact info)` are placed in base classes, which are extended by more specific classes such as `Student, Faculty, etc.`
+`Book`, `Thesis`, `Laptop`, and `Tablet` all inherit from the `Item` superclass, reducing redundancy and organizing shared behavior.
 
 #### 🔹 Polymorphism
 
-Key operations `(e.g., displaying information, validating records)` are overridden across subclasses to allow dynamic behavior.
+The system handles all item types as `Item` objects, while DAO methods return the correct subclass at runtime. This allows different items to be processed using shared method signatures.
 
 #### 🔹 Abstraction
 
-Core functionalities `(e.g., item registration, borrowing process)` are placed in abstract or general classes to hide implementation details from users.
+The abstract `Item` superclass defines only common item properties. DAO classes expose simple database operations while hiding technical SQL handling.
 
 _______________
 
