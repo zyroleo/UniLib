@@ -2,7 +2,27 @@
 
 ## 📖 OVERVIEW
 
-UniLib is a Java-based, console-driven library management system designed to help librarians manage books, theses, laptops, tablets and students with MySQL database integration.<br/>
+UniLib is a Java-based, console-driven library management system designed to help librarians manage books, theses, laptops, tablets and students with MySQL database integration.
+
+It showcases strong fundamentals in:
+
+-Object-oriented Programming (OOP) principles
+
+-Exception handling
+
+-DAO (Data Access Object) pattern
+
+Service-layer abstraction
+
+Database CRUD operations
+
+Users can:
+
+📚 Add new library items (book, laptop, tablet, thesis)
+🎓 Register students
+📑 Borrow and return items
+🔍 View all items, view availability and view all active borrowed items
+<br/>
 
 _______________
 
