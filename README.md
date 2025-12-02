@@ -91,7 +91,9 @@ src/
            └── Main.java
 
 ```
-##🗄️ MySQL Database Schema
+
+## 🗄️MySQL Database Schema
+
 `items` Table
 ```
 CREATE TABLE items (
