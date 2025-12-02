@@ -33,78 +33,155 @@ _________________
 
 _________________
 
-### 📁 REPOSITORY STUCTURES
-```
-schema.sql<br/>
-seed_data.sql<br/>
-triggers.sql<br/>
-views.sql<br/>
-README.md<br/>
-```
-_________________
+### 🦋OOP Concepts Applied
+🔹 Encapsulation
 
-### 🛠️ GETTING STARTED<br/>
+All class fields are protected/private and accessed through getters and setters to preserve data integrity.
 
-Clone the repository
-```
-git clone https://github.com/zyroleo/UniLib.git
-cd UniLib/library-system-DB
-```
+🔹 Inheritance
 
-Create (or choose) a database for the library system, e.g. library_db.
+Common attributes (e.g., ID, name, contact info) are placed in base classes, which are extended by more specific classes such as Student, Faculty, etc.
 
-Run the SQL schema file(s) to create needed tables and relationships.
-For example (if using MySQL):
-```
-mysql -u <username> -p <library_db> < schema.sql
-```
+🔹 Polymorphism
 
-(Optional) If seed/sample data is provided, import it to populate initial books, members, etc.
-```
-mysql -u <username> -p <library_db> < seed_data.sql
-```
+Key operations (e.g., displaying information, validating records) are overridden across subclasses to allow dynamic behavior.
 
-Configure your application (if any) to connect to the database library_db using correct credentials and host information.<br/>
+🔹 Abstraction
 
-Once connected, test basic queries to verify tables are created and accessible.<br/>
-
-_________________
-
-### 🧰 INTENDED USAGE
-
-This database module is designed to be used in tandem with an application layer (web, desktop, API) that implements library logic — e.g.:
-
-- Adding new books and members
-
-- Searching catalog / members
-
-- Borrowing/issuing books to a member
-
-- Returning books and updating availability
-
-- Tracking loan history, due dates, fines (if implemented)
-
-You may build your own UI or integrate with existing front-end/back-end frameworks, as long as they connect to the schema provided here.
-
-_________________
-
-### 📌 WHY THIS REPOSITORY EXIST
-
-Maintaining a clean, well-defined database schema for a library system helps in:
-
-- Ensuring data consistency (via constraints, relationships)
-
-- Simplifying integration with apps (clear table definitions)
-
-``````````````````````- Supporting scalability and future maintenance
-
-- Allowing reuse across different front-ends or projects
+Core functionalities (e.g., item registration, borrowing process) are placed in abstract or general classes to hide implementation details from users.
 
 _________________
 
 
-👥 CREATED BY:
-Albo, Lex Randal B.
-Ballesteros, Zyra
-Quijaro, Earl Leobert
+### 🎀Program Structure
+```
+/library-system-DB
+│
+├── Database.java           # Handles database connections + queries
+├── models/
+│   ├── Book.java
+│   ├── Member.java
+│   ├── Student.java
+│   ├── Faculty.java
+│   ├── Transaction.java
+│
+├── ui/
+│   └── MainMenu.java       # Console-based UI
+│
+└── utils/
+    └── Validator.java      # Input checking utilities
+```
 
+#### Main Components:
+
+Book – represents items in the library
+
+Member – base class for library users
+
+Student / Faculty – subclasses with specific rules
+
+Transaction – handles borrowing + returning
+
+Database – mock or real DB storage
+
+MainMenu – entry point and user interface
+
+Relationships (simplified):
+```
+Member
+ ├── Student
+ └── Faculty
+Book  ←→  Transaction  ←→  Member
+```
+
+_________________
+
+
+### 🧋How to Run the Program
+✔ Compile🤖
+```
+javac MainMenu.java
+```
+✔ Run🤖
+```
+java MainMenu
+```
+
+If the project uses packages, run:
+```
+javac -d . */*.java
+java ui.MainMenu
+```
+
+If using a database, ensure the DB file or connection settings are correct before running.
+
+_________________
+
+
+### ✨Sample Output
+```
+=============================
+       UniLib System
+=============================
+[1] Add Book
+[2] Register Member
+[3] Borrow Book
+[4] Return Book
+[5] View Records
+[0] Exit
+Choose an option: 1
+```
+
+Another example:
+```
+Book borrowed successfully!
+Due date: 2025-01-14
+```
+
+Screenshots may be added if you prefer.
+
+_________________
+
+
+### 🎆Author and Acknowledgment
+
+#### Author:
+
+Your Name / Team Name
+
+#### Acknowledgments:
+
+-With sincere appreciation, We thank God for His unwavering guidance, for the strength He has given me during challenging moments, and for the inspiration that allowed me to continue progressing. His blessings have enabled me to learn, grow, and complete this project successfully. I am truly grateful for His presence throughout this journey.
+
+-We would like to express my sincere gratitude to my CS 211 instructors Ms. Fatima Marie P. Agdon for their guidance, support, and dedication throughout this course. Their lessons greatly helped me complete this project.
+
+
+-Our sincere appreciation goes to our friends for their guidance, ideas, and constant encouragement during the development of this project.
+
+
+_________________
+
+
+### 🎨Other Sections
+#### Future Enhancements
+
+-Implement GUI (JavaFX or Swing)
+
+-Add login system (Admin vs User)
+
+-Add fine-calculation system
+
+-Integrate fully with SQL or Firebase
+
+-Add export/import (CSV/JSON)
+
+_________________
+
+
+## 📗References
+
+Java Documentation
+
+CS 211 Lecture Notes
+
+Online Java Tutorials (W3Schools, GeeksForGeeks, etc.)
