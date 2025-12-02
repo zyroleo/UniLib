@@ -198,20 +198,137 @@ _______________
 
 ### ✨Sample Output
 ```
-=============================
-       UniLib System
-=============================
-[1] Add Book
-[2] Register Member
-[3] Borrow Book
-[4] Return Book
-[5] View Records
-[0] Exit
-Choose an option: 1
+=== Welcome to UniLib ===
 
-Another example:
-Book borrowed successfully!
-Due date: 2025-01-14
+Menu:
+1) List items
+2) Check out (by call number)
+3) Check in (by call number) 
+4) View all borrowed items   
+5) Add item
+6) Remove item
+7) Update item
+8) Add student
+9) Remove student
+0) Exit
+Choice: 1
+
+=== BOOKS ===
+ - Data Structures (call#: B002) (AVAILABLE) -> Book: Data Structures by Jane Roe (2018) - CS House
+ - Introduction to Java (call#: B001) (AVAILABLE) -> Book: Introduction to Java by John Doe (2019) - TechPub
+
+=== THESES ===
+ - Effects of Processed Foods (call#: T100) (AVAILABLE) -> Thesis: Effects of Processed Foods by Alice Santos (2024) - BSFE
+
+=== LAPTOPS ===
+ - Dell Inspiron (call#: L500) (AVAILABLE) -> Laptop: Dell Inspiron
+
+=== TABLETS ===
+ - Galaxy Tab (call#: TB900) (AVAILABLE) -> Tablet: Galaxy Tab
+
+Menu:
+1) List items
+2) Check out (by call number)
+3) Check in (by call number)
+4) View all borrowed items
+5) Add item
+6) Remove item
+7) Update item
+8) Add student
+9) Remove student
+0) Exit
+Choice: 2
+Student code (e.g., 24-00101): 23-64749
+Student: QUIJARO, EARL LEOBERT L.
+Call number to check out: T100
+Checked out successfully.
+
+Menu:
+1) List items
+2) Check out (by call number)
+3) Check in (by call number)
+4) View all borrowed items
+5) Add item
+6) Remove item
+7) Update item
+8) Add student
+9) Remove student
+0) Exit
+Choice: 4
+
+Active Borrowed Items:
+ID | Call# | StudentCode | StudentName | Title (Type) | BorrowedAt
+12 | T100 | 23-64749 | QUIJARO, EARL LEOBERT L. | Effects of Processed Foods (THESIS) | 2025-12-03 01:57:54.0
+
+Menu:
+1) List items
+2) Check out (by call number)
+3) Check in (by call number)
+4) View all borrowed items
+5) Add item
+6) Remove item
+7) Update item
+8) Add student
+9) Remove student
+0) Exit
+Choice: 1
+
+=== BOOKS ===
+ - Data Structures (call#: B002) (AVAILABLE) -> Book: Data Structures by Jane Roe (2018) - CS House
+ - Introduction to Java (call#: B001) (AVAILABLE) -> Book: Introduction to Java by John Doe (2019) - TechPub
+
+=== THESES ===
+ - Effects of Processed Foods (call#: T100) (BORROWED) -> Thesis: Effects of Processed Foods by Alice Santos (2024) - BSFE
+
+=== LAPTOPS ===
+ - Dell Inspiron (call#: L500) (AVAILABLE) -> Laptop: Dell Inspiron
+
+=== TABLETS ===
+ - Galaxy Tab (call#: TB900) (AVAILABLE) -> Tablet: Galaxy Tab
+
+Menu:
+1) List items
+2) Check out (by call number)
+3) Check in (by call number)
+4) View all borrowed items
+5) Add item
+6) Remove item
+7) Update item
+8) Add student
+9) Remove student
+0) Exit
+Choice: 3
+Call number to check in: T100
+Checked in successfully.
+
+Menu:
+1) List items
+2) Check out (by call number)
+3) Check in (by call number)
+4) View all borrowed items
+5) Add item
+6) Remove item
+7) Update item
+8) Add student
+9) Remove student
+0) Exit
+Choice: 4
+
+Active Borrowed Items:
+ID | Call# | StudentCode | StudentName | Title (Type) | BorrowedAt
+
+Menu:
+1) List items
+2) Check out (by call number)
+3) Check in (by call number)
+4) View all borrowed items
+5) Add item
+6) Remove item
+7) Update item
+8) Add student
+9) Remove student
+0) Exit
+Choice:
 ```
 _______________
 
@@ -220,24 +337,20 @@ _______________
 
 Albo, Lex Randal B.
 
-Ballesteros, Zyra
+Ballesteros, Zyra M.
 
-Quijaro, Earl Leobert
+Quijaro, Earl Leobert L.
 
 _______________
 
 #### Acknowledgments:
 
-With sincere appreciation, We thank God for His unwavering guidance, for the strength He has given me during challenging moments, and for the inspiration that allowed me to continue progressing. His blessings have enabled me to learn, grow, and complete this project successfully. I am truly grateful for His presence throughout this journey.
+With sincere appreciation, We thank God for His unwavering guidance, for the strength He has given us during challenging moments, and for the inspiration that allowed us to continue progressing. His blessings have enabled me to learn, grow, and complete this project successfully. We are truly grateful for His presence throughout this journey.
 
-We would like to express my sincere gratitude to my CS 211 instructors Ms. Fatima Marie P. Agdon for their guidance, support, and dedication throughout this course. Their lessons greatly helped me complete this project.
+We would like to express our sincere gratitude to our CS 211 instructors Ms. Fatima Marie P. Agdon for their guidance, support, and dedication throughout this course. Their lessons greatly helped me complete this project.
 
 
 Our sincere appreciation goes to our friends for their guidance, ideas, and constant encouragement during the development of this project.
 
 _______________
-#### 📗References
 
-*Java Documentation*
-*CS 211 Lecture Notes*
-*Online Java Tutorials (W3Schools, GeeksForGeeks, etc.)*
