@@ -157,40 +157,42 @@ INSERT INTO students (student_code, name) VALUES
 ```
 
 
-### Main Components:
-
-**Book 📚** – represents items in the library
-
-**Member 🪪** – base class for library users
-
-**Student / Faculty 👥** – subclasses with specific rules
-
-**Transaction 🖥️** – handles borrowing + returning
-
-**Database 📊** – mock or real DB storage
-
-**MainMenu 💻** – entry point and user interface
-
-**Relationships (simplified):**
-Member
- ├── Student
- └── Faculty
-*Book  ←→  Transaction  ←→  Member*
-
 _______________
 
-## 🧋How to Run the Program
-✔ Compile 🤖
--       javac MainMenu.java
-✔ Run 🤖
--       java MainMenu
+## 🔧 Setup Instructions 🤖
+1. Install Requirements
 
-If the project uses packages, run:
+- Java 17+
+
+- MySQL Server
+
+- VS Code 
+
+- MySQL Connector/J (JDBC driver)
+
+2. Import the Project
+
+Place source files under:
 ```
-javac -d . */*.java
-java ui.MainMenu
+/src/library/...
 ```
-If using a database, ensure the DB file or connection settings are correct before running.
+
+3. Update Database Credentials
+
+In `DatabaseConnector.java`:
+```
+private static final String URL = "jdbc:mysql://localhost:3306/librarydb";
+private static final String USER = "root";
+private static final String PASSWORD = "yourpassword";
+```
+
+4. Run the Program
+
+Compile and run:
+```
+javac -d bin src/library/ui/Main.java
+java -cp bin;lib/mysql-connector-j-9.5.0.jar library.ui.Main
+```
 _______________
 
 
