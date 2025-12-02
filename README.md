@@ -28,25 +28,16 @@ _______________
 
 ## 🚀 FEATURES
 
-#### 🔹 Core Database Features
-
-- 📘 Book catalog (title, author, availability, category)<br/>
-
-- 🧑‍🤝‍🧑 Member records<br/>
-
-- 🔄 Loan management (borrow/return)<br/>
-
-- 🗂 Categories & metadata<br/>
-
-#### 🔹 Technical Features
-
--   🔐 Foreign keys & constraints<br/>
-
-- 🧱 Normalized and clean schema<br/>
-
-- ⚙️ Optional triggers & views<br/>
-
-- 📦 Easy export/import<br/>
+1) List items — Display all items with availability status.
+2) Check out (by call number) — Students may check out/borrow available items.
+3) Check in (by call number) — Updates loan status and item availability by returning the item.
+4) View all borrowed items — Shows all the active borrowed items.
+5) Add item — Register books, laptops, tablets, or theses.
+6) Remove item — Removes any books, laptops, tablets, or theses.
+7) Update item — Update any existing books, laptops, tablets, or theses.
+8) Add student — Add a student record to the system.
+9) Remove student — Remove a student record in the system.
+0) Exit — Exit UniLib.<br/>
 
 _______________
 
