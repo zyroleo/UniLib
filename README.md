@@ -6,15 +6,15 @@ UniLib is a Java-based, console-driven library management system designed to hel
 
 It showcases strong fundamentals in:
 
--Object-oriented Programming (OOP) principles
+- Object-oriented Programming (OOP) principles
 
--Exception handling
+- Exception handling
 
--DAO (Data Access Object) pattern
+- DAO (Data Access Object) pattern
 
-Service-layer abstraction
+- Service-layer abstraction
 
-Database CRUD operations
+- Database CRUD operations
 
 Users can:
 
