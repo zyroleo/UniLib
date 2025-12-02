@@ -1,6 +1,6 @@
 # UniLib
 
-📘 OVERVIEW
+##📘 OVERVIEW
 
 UniLib’s library-system-DB module provides the database schema and scripts for a Library Management System.
 It is intended to support key library operations storing book and member records, tracking borrow/return transactions, and managing library data in a relational database.
@@ -8,44 +8,38 @@ It is intended to support key library operations storing book and member records
 This module focuses solely on database design and data management (tables, relationships, data constraints) rather than UI or application logic.
 
 
-🚀 FEATURES
+###🚀 FEATURES
 
-🔹 Core Database Features
+###🔹 Core Database Features
 
-📘 Book catalog (title, author, availability, category)
+####📘 Book catalog (title, author, availability, category)
 
-🧑‍🤝‍🧑 Member records
+####🧑‍🤝‍🧑 Member records
 
-🔄 Loan management (borrow/return)
+####🔄 Loan management (borrow/return)
 
-🗂 Categories & metadata
+####🗂 Categories & metadata
 
-🔹 Technical Features
+###🔹 Technical Features
 
-🔐 Foreign keys & constraints
+####🔐 Foreign keys & constraints
 
-🧱 Normalized and clean schema
+####🧱 Normalized and clean schema
 
-⚙ Optional triggers & views
+####⚙ Optional triggers & views
 
-📦 Easy export/import
+####📦 Easy export/import
 
 
-📁 REPOSITORY STUCTURES
+###📁 REPOSITORY STUCTURES
 
 schema.sql
-
 seed_data.sql
-
 triggers.sql
-
 views.sql
-
 README.md
 
-
-
-🛠️ GETTING STARTED
+###🛠️ GETTING STARTED
 
 Clone the repository
 
@@ -70,7 +64,7 @@ Configure your application (if any) to connect to the database library_db using 
 
 Once connected, test basic queries to verify tables are created and accessible.
 
-🧰 INTENDED USAGE
+###🧰 INTENDED USAGE
 
 This database module is designed to be used in tandem with an application layer (web, desktop, API) that implements library logic — e.g.:
 
@@ -86,7 +80,7 @@ Tracking loan history, due dates, fines (if implemented)
 
 You may build your own UI or integrate with existing front-end/back-end frameworks, as long as they connect to the schema provided here.
 
-📌 WHY THIS REPOSITORY EXIST
+###📌 WHY THIS REPOSITORY EXIST
 
 Maintaining a clean, well-defined database schema for a library system helps in:
 
@@ -98,7 +92,7 @@ Supporting scalability and future maintenance
 
 Allowing reuse across different front-ends or projects
 
-🔍 FUTURE IMPROVEMENTS (POSSIBLE ENHANCEMENT)
+###🔍 FUTURE IMPROVEMENTS (POSSIBLE ENHANCEMENT)
 
 Add migration scripts for schema updates over time.
 
@@ -112,10 +106,6 @@ Provide seed data sample files (books, members) to ease testing.
 
 
 CREATED BY:
-
 Albo, Lex Randal B.
-
 Ballesteros, Zyra
-
 Quijaro, Earl Leobert
-
