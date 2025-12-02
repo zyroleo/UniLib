@@ -332,7 +332,7 @@ Choice:
 ```
 _______________
 
-### 🎆Author and Acknowledgment
+### 🎆Contributors
 
 
 Albo, Lex Randal B.
