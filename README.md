@@ -44,7 +44,7 @@ _______________
 ## 🦋OOP Concepts Applied
 #### 🔹 Encapsulation
 
-All class fields are protected/private and accessed through getters and setters to preserve data integrity.
+Classes such as `Item`, `Book`, `Laptop`, and `Student` have private fields with public getters/setters, ensuring controlled access to data.
 
 #### 🔹 Inheritance
 
@@ -63,22 +63,67 @@ _______________
 
 ## 🎀Program Structure
 ```
-/library-system-DB
-│
-├── Database.java           # Handles database connections + queries
-├── models/
-│   ├── Book.java
-│   ├── Member.java
-│   ├── Student.java
-│   ├── Faculty.java
-│   ├── Transaction.java
-│
-├── ui/
-│   └── MainMenu.java       # Console-based UI
-│
-└── utils/
-    └── Validator.java      # Input checking utilities
+src/
+ └── library
+      ├── dao
+      │    ├── DatabaseConnector.java
+      │    ├── ItemDAO.java
+      │    ├── LoanDAO.java
+      │    └── StudentDAO.java
+      │
+      ├── exceptions
+      │    ├── AlreadyBorrowedException.java
+      │    ├── InvalidInputException.java
+      │    └── ItemNotFoundException.java
+      │
+      ├── model
+      │    ├── Item.java (abstract)
+      │    ├── Book.java
+      │    ├── Borrowable.java
+      │    ├── Thesis.java
+      │    ├── Laptop.java
+      │    └── Tablet.java
+      │
+      ├── service
+      │    └── LibraryService.java
+      │
+      └── ui
+           └── Main.java
+
 ```
+##🗄️ MySQL Database Schema
+`items` Table
+```
+CREATE TABLE items (
+    call_number VARCHAR(20) PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    type ENUM('BOOK','THESIS','LAPTOP','TABLET') NOT NULL,
+    author VARCHAR(255),
+    publisher VARCHAR(255)
+);
+```
+
+`students` Table
+```
+CREATE TABLE students (
+    student_code VARCHAR(20) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+```
+
+`loans` Table
+```
+CREATE TABLE loans (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    call_number VARCHAR(20),
+    student_code VARCHAR(20),
+    borrowed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    returned_at TIMESTAMP NULL,
+    FOREIGN KEY (call_number) REFERENCES items(call_number),
+    FOREIGN KEY (student_code) REFERENCES students(student_code)
+);
+```
+
 
 ### Main Components:
 
