@@ -18,10 +18,10 @@ Database CRUD operations
 
 Users can:
 
-📚 Add new library items (book, laptop, tablet, thesis)
-🎓 Register students
-📑 Borrow and return items
-🔍 View all items, view availability and view all active borrowed items
+- 📚 Add new library items (book, laptop, tablet, thesis)
+- 🎓 Register students
+- 📑 Borrow and return items
+- 🔍 View all items, view availability and view all active borrowed items
 <br/>
 
 _______________
