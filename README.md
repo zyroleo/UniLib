@@ -46,20 +46,146 @@ _______________
 
 All model classes use private fields with getters/setters. DAOs encapsulate database logic so other layers do not need to interact with SQL.
 
+Example (Item class):
+```java
+private String callNumber;
+private String title;
+private boolean available;
+
+public String getCallNumber() { return callNumber; }
+public void setCallNumber(String callNumber) { this.callNumber = callNumber; }
+public boolean isAvailable() { return available; }
+public void setAvailable(boolean available) { this.available = available; }
+```
+**DAO Classes Hide Database Logic** 
+
+ItemDAO, StudentDAO, and LoanDAO encapsulate SQL operations so the rest of the system never deals with raw queries.
+
+Example:
+```java
+public Item getItem(String callNumber) {
+    String sql = "SELECT * FROM items WHERE call_number = ?";
+    // SQL logic hidden here
+}
+```
+
+The UI only calls:
+```java
+itemDAO.getItem(callNumber);
+```
+Everything else like connections, statements, error handling is hidden.
+
 #### 🔹 Inheritance
 
 `Book`, `Thesis`, `Laptop`, and `Tablet` all inherit from the `Item` superclass, reducing redundancy and organizing shared behavior.
 
-#### 🔹 Polymorphism
+ **Item Subclasses**  
+All item categories inherit from the `Item` superclass:
+
+```
+Item
+ ├── Book
+ ├── Thesis
+ ├── Laptop
+ └── Tablet
+```
+Each subclass uses:
+```java
+public class Book extends Item {
+    private String author;
+    private String publisher;
+}
+```
+This allows shared fields (title, call number, availability) to be defined once in the parent class.
+
+**Shared Behavior**
+
+All subclasses inherit:
+
+- availability methods
+
+- common metadata
+
+- core structure
+
+This reduces redundancy and ensures consistent behavior across item types.
+
+
+ #### 🔹 Polymorphism
 
 The system handles all item types as `Item` objects, while DAO methods return the correct subclass at runtime. This allows different items to be processed using shared method signatures.
+
+**DAO Returns Subclass Objects at Runtime** 
+
+`mapRowToItem()` determines which subclass to instantiate based on the database field:
+
+```java
+switch(type) {
+    case "BOOK": return new Book(...);
+    case "THESIS": return new Thesis(...);
+    case "LAPTOP": return new Laptop(...);
+    case "TABLET": return new Tablet(...);
+}
+```
+
+But the method returns them as:
+```java
+Item item = ...
+```
+This is runtime polymorphism.
+
+**LibraryService Handles All Items Using Superclass Type**  
+
+Methods like this retrieve an object as Item, not as a specific subclass:
+
+```java
+public void checkOutItem(String callNumber, String studentCode)
+```
+
+The method still works regardless of whether the item is a:
+
+- Book
+
+- Thesis
+
+- Laptop
+
+- Tablet
+
+**Overriding and Specialized Behavior**  
+
+Each subclass can override methods if needed (e.g., formatting output, validation rules), but the system always treats them polymorphically as `Item`.
+
 
 #### 🔹 Abstraction
 
 The abstract `Item` superclass defines only common item properties. DAO classes expose simple database operations while hiding technical SQL handling.
 
-_______________
+**The Item Superclass**
 
+The abstract `Item` class defines core item properties common to all library materials:
+
+```java
+public abstract class Item {
+    protected String callNumber;
+    protected String title;
+    protected boolean available;
+}
+```
+**DAO Methods Abstract SQL**  
+
+Instead of exposing SQL queries, DAOs provide simple methods:
+```text
+addItem(Item item)
+updateItem(Item item)
+removeItem(String callNumber)
+getItem(String callNumber)
+listItemsByType(String type)
+```
+**Service Layer Abstracts Library Operations**
+
+The UI does not handle loan logic, item availability checks, or validation.  
+`LibraryService` abstracts these responsibilities.
 
 ## 🎀Program Structure
 ```
